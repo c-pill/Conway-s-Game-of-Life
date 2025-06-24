@@ -57,12 +57,7 @@ class ConwayData:
     def tick(self):
         liveNeighborGrid = self.liveNeighborGrid()
         self.grid = [[self.newStatus(row, col, liveNeighborGrid[row][col]) for col in range(len(self.grid))] for row in range(len(self.grid))]
-
-    # def play(self):
-    #     if playGoL:
-    #         self.tick()
-    #         root.after(300, self.play)
-
+        
 class ConwayRules:
     # underpopulation with < 2 live neighbors
     # overpopulation with > 3 live neighbors
